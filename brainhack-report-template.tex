@@ -56,6 +56,7 @@
 \usepackage[utf8]{inputenc} %unicode support
 %\usepackage[applemac]{inputenc} %applemac support if unicode package fails
 %\usepackage[latin1]{inputenc} %UNIX support if unicode package fails
+\usepackage[htt]{hyphenat}
 
 \usepackage{array}
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
@@ -247,9 +248,9 @@ $if(acknow)$$acknow$$else$\emph{Acknowedgements section is missing.}$endif$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % if your bibliography is in bibtex format, use those commands:
-$if(bibfile)$
+$if(bibliography)$
 \bibliographystyle{bmc-mathphys} % Style BST file
-\bibliography{$bibfile$} % Bibliography file (usually '*.bib' )
+\bibliography{$bibliography$} % Bibliography file (usually '*.bib' )
 $endif$
 
 \end{backmatter}
