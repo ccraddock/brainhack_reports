@@ -36,14 +36,6 @@ affiliations:
 
 url: http://github.com/ccraddock/afni
 
-keywords: 
-
-- kw: connectome
-- kw: centrality
-- kw: degree centrality
-- kw: local functional connectivity density mapping
-- kw: AFNI
-
 coi: None
 
 acknow: The authors would like to thank the organizers and attendees of Brainhack MX and the developers of AFNI. This project was funded in part by a Educational Research Grant from Amazon Web Services.
@@ -68,7 +60,7 @@ lFCD was calculating using a region growing algorithm in which face-, side-, and
 ##### Validation:
 Outputs from the newly developed tools were compared to Python implementations of these measures from the Configurable Pipeline for the Analysis of Connectomes (C-PAC) \cite{Craddock2013c} using a preprocessed version of the C-PAC benchmark dataset (\url{http://fcp-indi.github.io/docs/user/benchmark.html}) in terms of similarity, computation time, and memory used.
 
-#Results and Discussion
+#Results
 AFNI tools were developed for calculating lFCD and DC from funcitonal nueroimaging data and have been submitted for inclusion into AFNI. LFCD and DC maps from the test dataset (illustrated in Fig. 1) are identical to those calculated using C-PAC but required substantially less time and memory (see Table 1).
 
 # Conclusions
