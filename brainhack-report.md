@@ -46,12 +46,9 @@ keywords:
 
 coi: None
 
-acknow: The authors would like to thank the organizers and attendees of Brainhack MX and the developers of AFNI.
+acknow: The authors would like to thank the organizers and attendees of Brainhack MX and the developers of AFNI. This project was funded in part by a Educational Research Grant from Amazon Web Services.
 
 contrib: RCC and DJC wrote the software, DJC performed tests, and DJC and RCC wrote the report.
-
-abstract:
-  Degree centrality and local functional connectivity density are statistics for summarizing the brain's regional connectivity. Although these methods are becoming popular for investigating inter-individual variation in brain connectivity, optimized tools for their calculation are not widely available. To address this problem, we implemented the \texttt{3dDegreeCentrality} and \texttt{3dLFCD} AFNI tools to calculate these measures. Validation on a test dataset found that the new tools produce identical results to the leading Python implementation with a 30$\times$ decrease in time and a 16$\times$ decrease in memory. The developed tools have been submitted for inclusion in AFNI.
   
 bibliography: brainhack-report
 ...

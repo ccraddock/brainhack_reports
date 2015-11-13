@@ -101,7 +101,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \title{$if(title)$$title$$else$Missing Title$endif$}
-
+\vskip2ex
+$if(url)$\projectURL{Project URL: \url{$url$}$else$URL is missing$endif$}
 
 $for(author)$
 $if(author.initials)$
@@ -170,16 +171,15 @@ $endfor$
 %%                                          %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{abstractbox}
+%\begin{abstractbox}
 
-\begin{abstract} % abstract
+%\begin{abstract} % abstract
 	
-$if(abstract)$$abstract$$else$Blank Abstract$endif$
+%$if(abstract)$$abstract$$else$Blank Abstract$endif$
 
-\end{abstract}
+%\end{abstract}
 
-\vskip1ex
-$if(url)$\url{$url$}$else$URL is missing$endif$
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                                          %%
@@ -189,12 +189,10 @@ $if(url)$\url{$url$}$else$URL is missing$endif$
 %%                                          %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%\vskip1ex
 
-\begin{keyword}
-$for(keywords)$
-$if(keywords.kw)$\kwd{$keywords.kw$}$else$%$endif$
-$endfor$
-\end{keyword}
+%$if(url)$\projectURL{\url{$url$}$else$URL is missing$endif$}
+%$if(url)$\projectURL{$url$$else$URL is missing$endif$}
 
 % MSC classifications codes, if any
 %\begin{keyword}[class=AMS]
@@ -203,12 +201,13 @@ $endfor$
 %\kwd[; secondary ]{}
 %\end{keyword}
 
-\end{abstractbox}
+%\end{abstractbox}
 %
 \end{fmbox}% uncomment this for twcolumn layout
 
 \end{frontmatter}
 
+%{\sffamily\bfseries\fontsize{10}{12}\selectfont Project URL: \url{$url$}}
 
 %%% Import the body from pandoc formatted text
 $body$

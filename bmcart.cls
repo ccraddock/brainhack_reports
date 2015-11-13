@@ -820,6 +820,7 @@
 
 % FRONT MATTER FONTS 
 \setattribute{dochead}     {size} {\sffamily\fontsize{13pt}{13pt}\bfseries\selectfont\color{white}}
+\setattribute{urlstrip}     {size} {\sffamily\fontsize{13pt}{13pt}\bfseries\selectfont\color{white}}
 %\setattribute{dochead}     {size} {\sffamily\fontsize{13pt}{13pt}\bfseries\selectfont\color{bhgreen}}
 \setattribute{title}       {size} {\sffamily\fontsize{24pt}{26pt}\selectfont\raggedright}
 \setattribute{subtitle}    {size} {\sffamily\fontsize{20pt}{22pt}\selectfont\raggedright}
@@ -831,7 +832,7 @@
 \setattribute{abstract}    {size} {\sffamily\fontsize{10}{12}\selectfont}
 \setattribute{abstractname}{size} {\bfseries}
 \setattribute{keyword}     {size} {\sffamily\fontsize{10}{12}\selectfont}
-\setattribute{projectURL}     {size} {\sffamily\fontsize{10}{12}\selectfont}
+\setattribute{projectURL}     {size} {\sffamily\bfseries\fontsize{11}{14}\selectfont}
 \setattribute{keywordname} {size} {\bfseries}
 
 \setattribute{runninghead} {size} {\sffamily\fontsize{8}{10}\selectfont}
@@ -1026,6 +1027,23 @@
   \includegraphics[scale=0.95]{bhgn}
   \fcolorbox{black}{black}{\hbox to\@tempdima{\dochead@size{#2}\hfill\fontshape{n}\selectfont\smash{\dochead@hook}}}
 \egroup}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% projectURL
+
+\let\projectURL@hook\relax
+
+\def\bmc@projectURL{\@ifnextchar[{\projectURL@fmt}{\projectURL@fmt[]}}
+
+\def\projectURL@fmt[#1]#2{%
+\bgroup%
+  \@tempdima=\hsize%
+  \advance\@tempdima by-8\p@%
+  \setlength{\fboxsep}{4\p@}%
+  \setlength{\fboxrule}{\z@}%
+  %\fcolorbox{black}{black}{\hbox to\@tempdima{\projectURL@size{#2}\hfill\fontshape{n}\selectfont\smash{\projectURL@hook}}}
+  {\hbox to\@tempdima{\projectURL@size{#2}\hfill\fontshape{n}\selectfont\smash{\projectURL@hook}}}
+\egroup}
+
 
 %to\@tempdima{\dochead@size\MakeUppercase{#2}\hfill\fontshape{n}\selectfont\smash{\dochead@hook}}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TITLE 
@@ -1633,7 +1651,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% section, subsection etc.
 % we do not like article appearance:
-
+								   
 \renewcommand\section{\@startsection {section}{1}{\z@}%
                                    {-\medskipamount}%
                                    {0.001\p@}%
