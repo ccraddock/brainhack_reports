@@ -48,4 +48,4 @@ If you want to use this template to write your own Brainhack Report (after all, 
    7. Compile the image using the instructions above and see how beautiful it is!
    8. When you are done, push all of you changes to the GitHub repository and submit your abstract for inclusion in the proceedings [here](http://brainhack.org/proceedings-submission-form/).
    
-The style files and template used here were lifted from BioMed Central.
+The style files and template used here were lifted from BioMed Central and modified for Brainhack project reports. The final format of your report that appears in the proceedings will be reformatted to meet BMC and *Gigascience* standards and will differ from the Brainhack template.

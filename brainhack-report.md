@@ -43,6 +43,8 @@ acknow: The authors would like to thank the organizers and attendees of Brainhac
 contrib: RCC and DJC wrote the software, DJC performed tests, and DJC and RCC wrote the report.
   
 bibliography: brainhack-report
+
+gigascience-ref: REFXXX
 ...
 
 #Introduction
