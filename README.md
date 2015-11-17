@@ -10,7 +10,7 @@ The installation of LaTex can be easily achieved on a Mac using the [mactex pack
 
 For Ubuntu:
     
-	sudo apt-get install texlive
+	sudo apt-get install texlive-full
 
 For Redhat/CentOS/Fedora (I believe that this will work):
 	
@@ -46,6 +46,6 @@ If you want to use this template to write your own Brainhack Report (after all, 
    5. Create a bibtex bibliography file. Again, do not include underscores in the name of this file. If you are not familiar with creating a bibtex file you have several options. Bibliography software such as EndNote and Mendeley will allow you to export references as bibtex. The homepage for journal articles almost always allow you to export a reference in bibtex. For papers that are in PubMED you can use [TeXMed](http://www.bioinformatics.org/texmed/) to export to bibtex. Copy all of your references to the same file. The key will be used in the body of the document to cite the article, I usually change this key to something that is easy to guess (i.e. Craddock2013) so that I don't have to refer to the bib file constantly. 
    6. Add a figure and up to two tables. Make 'em look good.
    7. Compile the image using the instructions above and see how beautiful it is!
-   8. When you are done, push all of you changes to the GitHub repository and submit your abstract for inclusion in the proceedings [here](http://brainhack.org/proceedings-submission-form/).
+   8. When you are done, push all of your changes to the GitHub repository and submit your abstract for inclusion in the proceedings [here](http://brainhack.org/proceedings-submission-form/).
    
 The style files and template used here were lifted from BioMed Central and modified for Brainhack project reports. The final format of your report that appears in the proceedings will be reformatted to meet BMC and *Gigascience* standards and will differ from the Brainhack template.
