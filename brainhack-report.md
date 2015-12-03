@@ -58,15 +58,17 @@ Calculating DC is straight forward and is quick when a correlation threshold or 
 
 \begin{table*}[t!]
 \caption{\label{stattable}Comparison of the time and memory required by the C-PAC and AFNI implementations to calculate DC (sparsity and correlation threshold) and lFCD on the first resting state scan of the first scanning session for all 36 participants' data in the IBATRT dataset. Values are averaged across the 36 datasets and presented along with standard deviations in parenthesis.}
-\begin{tabular}{l l l l l l l l}
+\begin{tabular}{l l l l l l l l l l l}
  \hline\noalign{\smallskip}
-          &            & \multicolumn{2}{c}{DC $\rho \geq 0.6$} & \multicolumn{2}{c}{DC $0.1\%$ Sparsity} & \multicolumn{2}{c}{lFCD $\rho \geq 0.6$} \\
-  Method  & Number of Threads & Time (s)       & Mem (GB)            & Time (s)       & Mem (GB)            & Time (s)       & Mem (GB) \\
+          &            & \multicolumn{3}{c}{DC $\rho \geq 0.6$} & \multicolumn{3}{c}{DC $0.1\%$ Sparsity} & \multicolumn{3}{c}{lFCD $\rho \geq 0.6$} \\
+    \noalign{\smallskip}
+  Impl  & Thr & Mem (GB) & $T_D$ (s) &  $T_T$ (s) & Mem (GB) & $T_D$ (s) &  $T_T$ (s) & Mem (GB) & $T_D$ (s) &  $T_T$ (s) \\
     \hline\noalign{\smallskip}
-  C-PAC   & 1          & 360 (15)       & 6.2(70)             & 360 (15)       & 6.2(70)             & 360 (15)       & 6.2(70)  \\
-  AFNI    & 2          & 360 (15)       & 6.2(70)             & 360 (15)       & 6.2(70)             & 360 (15)       & 6.2(70)  \\
-  AFNI    & 4          & 360 (15)       & 6.2(70)             & 360 (15)       & 6.2(70)             & 360 (15)       & 6.2(70)  \\
-  AFNI    & 8          & 360 (15)       & 6.2(70)             & 360 (15)       & 6.2(70)             & 360 (15)       & 6.2(70)  \\
+  C-PAC   & 1          & 0.84 (0.003) & 62.6 (9.23) & 793.1  & 0.85 (0.002) & 86.3 (13.8) & 420.0 & 0.86 (0.003) & 8.8 (1.3)  & 50.7 \\
+  AFNI    & 1          & 0.84 (0.003) & 62.6 (9.23) & 793.1  & 0.85 (0.002) & 86.3 (13.83) & 420.0 & 0.86 (0.003) & 8.8 (1.27)  & 50.7 \\
+  AFNI    & 2          & 0.86 (0.002) & 39.0 (4.62) & 752.3  & 0.86 (0.003) & 38.2 (0.55) & 353.7 & 0.86 (0.003) & 5.1 (0.25) & 56.4 \\
+  AFNI    & 4          & 0.86 (0.003) & 18.2 (1.93) & 784.1  & 0.87 (0.003) & 19.0 (0.45) & 359.1 & 0.87 (0.003) & 4.3 (0.23) & 95.0 \\
+  AFNI    & 8          & 0.87 (0.002) & 11.2 (0.25) & 887.3  & 0.87 (0.000) & 11.3 (0.31) & 439.0 & 0.87 (0.000) & 4.1 (0.15) & 178.2 \\
   \noalign{\smallskip}\hline
 \end{tabular}
 \end{table*}
